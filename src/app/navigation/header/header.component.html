@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-md>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div><a routerLink="/">Angular Material Demo</a></div>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-lg>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li><a routerLink="/form_control">Form Controls</a></li>
+      <li><a routerLink="/navigation">Navigation</a></li>
+      <li><a routerLink="/layout">Layout</a></li>
+      <li><a routerLink="/btn_indicator">Buttons & Indicators</a></li>
+      <li><a routerLink="/popup_modal">Popups & Modals</a></li>
+      <li><a routerLink="/table">Data table</a></li>
+    </ul>
+  </div>
+</mat-toolbar>
