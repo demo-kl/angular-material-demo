@@ -1,0 +1,136 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$wellmark-primary: (
+  50 : #e1f4fc,
+  100 : #b4e5f8,
+  200 : #82d3f4,
+  300 : #50c1f0,
+  400 : #2bb4ec,
+  500 : #05a7e9,
+  600 : #049fe6,
+  700 : #0496e3,
+  800 : #038cdf,
+  900 : #017cd9,
+  A100 : #ffffff,
+  A200 : #cee7ff,
+  A400 : #9bceff,
+  A700 : #81c2ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$wellmark-secondary: (
+  50 : #e1fcf6,
+  100 : #b4f8ea,
+  200 : #82f4dc,
+  300 : #50f0cd,
+  400 : #2becc3,
+  500 : #05e9b8,
+  600 : #04e6b1,
+  700 : #04e3a8,
+  800 : #03dfa0,
+  900 : #01d991,
+  A100 : #ffffff,
+  A200 : #ceffec,
+  A400 : #9bffd9,
+  A700 : #81ffd0,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$wellmark-error: (
+  50 : #fae7e6,
+  100 : #f2c2c1,
+  200 : #e99a98,
+  300 : #e0716f,
+  400 : #d95250,
+  500 : #d23431,
+  600 : #cd2f2c,
+  700 : #c72725,
+  800 : #c1211f,
+  900 : #b61513,
+  A100 : #ffe6e6,
+  A200 : #ffb4b3,
+  A400 : #ff8180,
+  A700 : #ff6867,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+// Default indigo theme
+// $indigo-primary: mat-palette($mat-indigo);
+// $indigo-accent:  mat-palette($mat-pink, A200, A100, A400);
+// $indigo-theme:   mat-light-theme($indigo-primary, $indigo-accent);
+// @include angular-material-theme($indigo-theme);
+
+// Custom wellmark theme
+$wellmark-demo-primary: mat-palette($wellmark-primary);
+$wellmark-demo-accent: mat-palette($wellmark-secondary, A200, A100, A400);
+$wellmark-demo-warn:    mat-palette($wellmark-error);
+$wellmark-demo-theme: mat-light-theme($wellmark-demo-primary, $wellmark-demo-accent, $wellmark-demo-warn);
+@include angular-material-theme($wellmark-demo-theme);
+
+// mat-typography-level(font-size, line-height, and font-weight, 'option: $letter-spacing:')
+$wellmark-demo-typography: mat-typography-config(
+  $font-family:   'Roboto, sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3:     mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2:     mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(24px, 32px, 400),
+  $title:         mat-typography-level(20px, 32px, 500),
+  $subheading-2:  mat-typography-level(16px, 28px, 400),
+  $subheading-1:  mat-typography-level(15px, 24px, 400),
+  $body-2:        mat-typography-level(14px, 24px, 500),
+  $body-1:        mat-typography-level(14px, 20px, 400),
+  $caption:       mat-typography-level(12px, 20px, 400),
+  $button:        mat-typography-level(14px, 14px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+@include mat-core($wellmark-demo-typography);
+
