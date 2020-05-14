@@ -115,7 +115,7 @@ $wellmark-demo-theme: mat-light-theme($wellmark-demo-primary, $wellmark-demo-acc
 
 // mat-typography-level(font-size, line-height, and font-weight, 'option: $letter-spacing:')
 $wellmark-demo-typography: mat-typography-config(
-  $font-family:   'Roboto, sans-serif',
+  $font-family:   '"Open Sans", "Helvetica Neue", sans-serif',
   $display-4:     mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
   $display-3:     mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
   $display-2:     mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
@@ -132,5 +132,6 @@ $wellmark-demo-typography: mat-typography-config(
   $input:         mat-typography-level(inherit, 1.125, 400)
 );
 
-@include mat-core($wellmark-demo-typography);
+@include angular-material-typography($wellmark-demo-typography);
+// @include mat-core($wellmark-demo-typography);
 
