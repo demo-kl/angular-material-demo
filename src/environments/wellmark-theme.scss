@@ -35,32 +35,32 @@ $wellmark-primary: (
   )
 );
 
-$wellmark-secondary: (
-  50 : #e1fcf6,
-  100 : #b4f8ea,
-  200 : #82f4dc,
-  300 : #50f0cd,
-  400 : #2becc3,
-  500 : #05e9b8,
-  600 : #04e6b1,
-  700 : #04e3a8,
-  800 : #03dfa0,
-  900 : #01d991,
-  A100 : #ffffff,
-  A200 : #ceffec,
-  A400 : #9bffd9,
-  A700 : #81ffd0,
+$wellmark-Variant: (
+  50 : #e0f1f8,
+  100 : #b3dbef,
+  200 : #80c4e4,
+  300 : #4dacd9,
+  400 : #269ad0,
+  500 : #0088c8,
+  600 : #0080c2,
+  700 : #0075bb,
+  800 : #006bb4,
+  900 : #0058a7,
+  A100 : #d1e6ff,
+  A200 : #9ecbff,
+  A400 : #6bafff,
+  A700 : #52a2ff,
   contrast: (
       50 : #000000,
       100 : #000000,
       200 : #000000,
       300 : #000000,
-      400 : #000000,
-      500 : #000000,
-      600 : #000000,
-      700 : #000000,
-      800 : #000000,
-      900 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
       A100 : #000000,
       A200 : #000000,
       A400 : #000000,
@@ -109,7 +109,7 @@ $wellmark-error: (
 
 // Custom wellmark theme
 $wellmark-demo-primary: mat-palette($wellmark-primary, 500);
-$wellmark-demo-accent:  mat-palette($wellmark-secondary, A200, A100, A400);
+$wellmark-demo-accent:  mat-palette($wellmark-Variant, A200, A100, A400);
 $wellmark-demo-warn:    mat-palette($wellmark-error);
 $wellmark-demo-theme:   mat-light-theme($wellmark-demo-primary, $wellmark-demo-accent, $wellmark-demo-warn);
 @include angular-material-theme($wellmark-demo-theme);
