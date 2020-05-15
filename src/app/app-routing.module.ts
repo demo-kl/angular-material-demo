@@ -9,6 +9,7 @@ import { LayoutComponent } from './featured/layout/layout.component'
 import { BtnIndicatorComponent } from './featured/btn-indicator/btn-indicator.component'
 import { PopupModalComponent } from './featured/popup-modal/popup-modal.component'
 import { TableComponent } from './featured/table/table.component'
+import { TypographyComponent } from './featured/typography/typography.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'layout', component: LayoutComponent},
   { path: 'btn_indicator', component: BtnIndicatorComponent},
   { path: 'popup_modal', component: PopupModalComponent},
-  { path: 'table', component: TableComponent}
+  { path: 'table', component: TableComponent},
+  { path: 'typography', component: TypographyComponent}
 ];
 
 @NgModule({

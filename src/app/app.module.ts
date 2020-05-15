@@ -91,6 +91,7 @@ import { TablePaginationComponent } from './featured/table/table/table-paginatio
 import { TableSelectionComponent } from './featured/table/table/table-selection/table-selection.component';
 import { TableSortingComponent } from './featured/table/table/table-sorting/table-sorting.component';
 import { TableReorderableComponent } from './featured/table/table/table-reorderable/table-reorderable.component';
+import { TypographyComponent } from './featured/typography/typography.component';
 
 @NgModule({
   declarations: [
@@ -176,7 +177,8 @@ import { TableReorderableComponent } from './featured/table/table/table-reordera
     TablePaginationComponent,
     TableSelectionComponent,
     TableSortingComponent,
-    TableReorderableComponent
+    TableReorderableComponent,
+    TypographyComponent
   ],
   imports: [
     AppRoutingModule,

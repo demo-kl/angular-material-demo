@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+
 @include mat-core();
 
 $wellmark-primary: (
@@ -107,11 +108,48 @@ $wellmark-error: (
 // @include angular-material-theme($indigo-theme);
 
 // Custom wellmark theme
-$wellmark-demo-primary: mat-palette($wellmark-primary);
-$wellmark-demo-accent: mat-palette($wellmark-secondary, A200, A100, A400);
+$wellmark-demo-primary: mat-palette($wellmark-primary, 500);
+$wellmark-demo-accent:  mat-palette($wellmark-secondary, A200, A100, A400);
 $wellmark-demo-warn:    mat-palette($wellmark-error);
-$wellmark-demo-theme: mat-light-theme($wellmark-demo-primary, $wellmark-demo-accent, $wellmark-demo-warn);
+$wellmark-demo-theme:   mat-light-theme($wellmark-demo-primary, $wellmark-demo-accent, $wellmark-demo-warn);
 @include angular-material-theme($wellmark-demo-theme);
+
+$mat-light-theme-foreground: (
+  base:              black,
+  divider:           $dark-dividers,
+  dividers:          $dark-dividers,
+  disabled:          $dark-disabled-text,
+  disabled-button:   rgba(black, 0.26),
+  disabled-text:     $dark-disabled-text,
+  elevation:         black,
+  hint-text:         $dark-disabled-text,
+  secondary-text:    $dark-secondary-text,
+  icon:              rgba(black, 0.54),
+  icons:             rgba(black, 0.54),
+  text:              rgba(black, 0.87),
+  slider-min:        rgba(black, 0.87),
+  slider-off:        rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+// Background palette for light themes.
+$mat-light-theme-background: (
+  status-bar: map_get($mat-grey, 300),
+  app-bar:    map_get($mat-grey, 100),
+  background: mat-color(map_get($wellmark-demo-theme, accent), 100),
+  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: map_get($mat-grey, 300),
+  selected-disabled-button: map_get($mat-grey, 400),
+  disabled-button-toggle: map_get($mat-grey, 200),
+  unselected-chip: map_get($mat-grey, 300),
+  disabled-list-option: map_get($mat-grey, 200),
+  tooltip: map_get($mat-grey, 700),
+);
 
 // mat-typography-level(font-size, line-height, and font-weight, 'option: $letter-spacing:')
 $wellmark-demo-typography: mat-typography-config(
@@ -121,13 +159,13 @@ $wellmark-demo-typography: mat-typography-config(
   $display-2:     mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
   $display-1:     mat-typography-level(34px, 40px, 400),
   $headline:      mat-typography-level(24px, 32px, 400),
-  $title:         mat-typography-level(20px, 32px, 500),
+  $title:         mat-typography-level(20px, 32px, 700),
   $subheading-2:  mat-typography-level(16px, 28px, 400),
   $subheading-1:  mat-typography-level(15px, 24px, 400),
-  $body-2:        mat-typography-level(14px, 24px, 500),
+  $body-2:        mat-typography-level(14px, 24px, 700),
   $body-1:        mat-typography-level(14px, 20px, 400),
   $caption:       mat-typography-level(12px, 20px, 400),
-  $button:        mat-typography-level(14px, 14px, 500),
+  $button:        mat-typography-level(14px, 14px, 700),
   // Line-height must be unit-less fraction of the font-size.
   $input:         mat-typography-level(inherit, 1.125, 400)
 );
